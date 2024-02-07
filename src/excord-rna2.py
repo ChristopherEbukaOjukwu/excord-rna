@@ -34,7 +34,6 @@ if __name__ == "__main__":
     for filename in os.listdir(args.input_folder):
         if filename.endswith(".bam"):
             input_bam_file = os.path.join(args.input_folder, filename)
-            #output_bed_file = os.path.join(args.output_folder, f"{filename.split('.')[0]}.bed")
             output_bed_file = os.path.join(args.output_folder, f"{filename.split('.bam')[0]}.bed")
 
             with open(output_bed_file, "w") as output_file:
